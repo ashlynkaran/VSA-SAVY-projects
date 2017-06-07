@@ -28,21 +28,6 @@ class Edge(object):
    def __str__(self):
        return str(self.src) + '->' + str(self.dest)
 
-class weightedEdge(Edge):
-    def __init__(self, src, dest, tot, out):
-        self.src = src
-        self.dest = dest
-        self.tot = tot
-        self.out = out
-    def getTot(self):
-        return self.tot
-    def getOut(self):
-        return self.out
-    def __str__(self):
-        return str(self.src) + "-->" + str(self.dest) + ", " + str(self.tot) + ", " \
-                                                                               "" + \
-               str(self.out)
-
 class Digraph(object):
    """
    A directed graph
@@ -73,24 +58,3 @@ class Digraph(object):
                res = res + str(k) + '->' + str(d) + '\n'
        return res[:-1]
 
-class weightedDigraph(Digraph):
-
-    def addWeightedEdge(self, weightedEdge):
-        src = weightedEdge.getSource()
-        dest = weightedEdge.getDestination()
-        tot = weightedEdge.getTot()
-        out = weightedEdge.getOut()
-        if not (src in self.nodes and dest in self.nodes):
-            raise ValueError('Node not in graph')
-        self.edges[src].append([dest, tot, out])
-
-    def __str__(self):
-        res = ''
-        for k in self.edges:
-            for d in self.edges[k]:
-                dest = d[0]
-                tot = d[1]
-                out = d[2]
-                res = res + str(k) + '->' + str(dest) + ", " + str(tot) + ", " + str(
-                    out)+ '\n'
-        return res[:-1]
