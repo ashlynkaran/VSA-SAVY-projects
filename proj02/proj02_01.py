@@ -1,22 +1,19 @@
 # Name:
 # Date:
 
-# proj01: A Simple Program
-# This program asks the user for his/her name and age.
-# Then, it prints a sentence that says when the user will turn 100.
+# proj02: sum
 
-# If you complete extensions, describe your extensions here!
+# Write a program that prompts the user to enter numbers, one per line,
+# ending with a line containing 0, and keep a running sum of the numbers.
+# Only print out the sum after all the numbers are entered
+# (at least in your final version). Each time you read in a number,
+# you can immediately use it for your sum,
+# and then be done with the number just entered.
 
-name = raw_input("Enter your name: ")
-age = int(raw_input("Enter your age: "))
-birthday = raw_input("Has your birthday happened this year? Enter Y or N: ")
-
-if birthday == "Y":
-    # Calculates the year that the user will be 100
-    year_100 = str((100 - age) + 2017)
-
-else:
-    # Calculates the year that the user will be 100
-    year_100 = str((100 - age) + 2016)
-
-print name, " will turn 100 in the year ", year_100, "."
+#Example:
+# Enter a number to sum, or 0 to indicate you are finished: 4
+# Enter a number to sum, or 0 to indicate you are finished: 5
+# Enter a number to sum, or 0 to indicate you are finished: 2
+# Enter a number to sum, or 0 to indicate you are finished: 10
+# Enter a number to sum, or 0 to indicate you are finished: 0
+#The sum of your numbers is: 21
