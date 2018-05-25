@@ -2,7 +2,7 @@
 # Date:
 
 
-# proj06: Hangman
+# proj05: Hangman
 
 # -----------------------------------
 # Helper code
