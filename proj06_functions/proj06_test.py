@@ -1,5 +1,5 @@
-from proj05_01 import *
-from proj05_02 import *
+from proj06_01 import *
+
 
 # TESTS
 # Feel free to add your own tests as needed!
@@ -42,54 +42,27 @@ L3 = [3, "a"]
 L4 = [5, "b", 10, 7, "a"]
 L5 = [5, 7, 11]
 
-print("Intersection Tests")
-# Test 6
-if intersection(L1, L2) == []:
-    print("Test 6: PASS")
-else:
-    print("Test 6: FAIL")
-
-# Test 7
-if intersection(L2, L3) == [3]:
-    print("Test 7: PASS")
-else:
-    print("Test 7: FAIL")
-
-# Test 8
-if intersection(L2, L4) == []:
-    print("Test 8: PASS")
-else:
-    print("Test 8: FAIL")
-
-# Test 9
-if intersection(L3, L4) == ["a"]:
-    print("Test 9: PASS")
-else:
-    print("Test 9: FAIL")
-
-# Test 10
-if intersection(L4, L5) == [5, 7]:
-    print("Test 10: PASS\n")
-else:
-    print("Test 10: FAIL\n")
 
 vowels = ['a', 'e', 'i', 'o', 'u', 'y']
 
 print("Vowel Finder Tests")
 
-# Test 11
+# Test 6
 if vowelFinder(['C', 'n', 's', 'n', 't', 's'], vowels) == []:
-    print ("Test 11: PASS")
+    print ("Test 6: PASS")
 else:
-    print ("Test 11: FAIL")
+    print ("Test 6: FAIL")
 
 sentence_string = "Hello, my name is Monty Python."
 sentence_list = []
 for letter in sentence_string:
     sentence_list.append(letter)
 
-# Test 12
+# Test 7
 if vowelFinder(sentence_list, vowels) == ['a', 'e', 'i', 'o', 'y']:
-    print ("Test 12: PASS\n")
+    print ("Test 7: PASS\n")
 else:
-    print ("Test 12: FAIL\n")
+    print ("Test 7: FAIL\n")
+
+
+#Add your own tests here!!

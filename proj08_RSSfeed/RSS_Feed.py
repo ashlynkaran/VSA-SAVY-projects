@@ -45,7 +45,34 @@ def process(url):
 
 # Problem 1
 
-# TODO: NewsStory
+# TODO: Create class NewsStory by finishing the constructor and get methods
+
+class NewsStory(object):
+    """
+    A class that stores information about a NewsStory.
+    Attributes:
+        * guid
+        * title
+        * subject
+        * summary
+        * link
+    """
+    def __init__(self, guid):
+        """
+        Returns a NewsStory object with the following attributes
+        :param guid: a string that serves as a unique name for this entry 
+        :param title: string
+        :param subject: string
+        :param summary: string
+        :param link: string     
+        """
+        self.guid = guid
+
+    def get_guid(self):
+        return self.guid
+
+# Your job is to write functions for the other 4 attributes.
+
 
 #======================
 # Part 2
@@ -59,12 +86,40 @@ class Trigger(object):
         for the given news item, or False otherwise.
         """
         raise NotImplementedError
+        # There is no other code for the Trigger object. This is an abstract class - it
+        #  is serving as an umbrella for all of the other types of triggers. Start
+        # working on problems 2-5 below - do not add code here!
 
 # Whole Word Triggers
 # Problems 2-5
 
 # TODO: WordTrigger
 
+# Create a class, WordTrigger, that is a subclass of trigger.
+
+# You will need a constructor (an "init" method). This constructor should take a word
+# and save the word as part of itself (just like NewsStory takes a guid and saves it as
+#  part of itself).
+
+# You will also need one method: is_word_in. This method will take in one string,
+# and it will return True if the word is in the text, False otherwise. This method
+# should not be case sensitive.
+
+
+
+
+
+
+
+
+
+# Each of the three triggers below can be completed in three lines.
+# First, define the new class, which is a subclass of WordTrigger.
+# You do NOT need a constructor, because this is inherited from WordTrigger.
+# Second, create a method "evaluate" that takes a NewsStory object.
+# Third, uses "is_word_in" to check to see
+#  if the word is in the appropriate part of the story (for example, for title trigger,
+# to see if the word is in the title of the story).
 # TODO: TitleTrigger
 # TODO: SubjectTrigger
 # TODO: SummaryTrigger
@@ -73,6 +128,10 @@ class Trigger(object):
 # Composite Triggers
 # Problems 6-8
 
+# Each of these triggers should be a subclass of Trigger, NOT WordTrigger.
+# That means they will need their own constructor, because they cannot inherit from the
+#  class WordTigger.
+# They will also need an evaluate method.
 # TODO: NotTrigger
 # TODO: AndTrigger
 # TODO: OrTrigger
@@ -81,6 +140,8 @@ class Trigger(object):
 # Phrase Trigger
 # Question 9
 
+# This is also a subclass of Trigger, so it will need a constructor and an evaluate
+# method.
 # TODO: PhraseTrigger
 
 
